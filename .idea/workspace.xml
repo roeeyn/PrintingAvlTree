@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JavaFxApplication/avltreeui/Controller.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JavaFxApplication/avltreeui/Controller.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/avltreeui/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/avltreeui/Controller.java" afterDir="false" />
     </list>
     <ignored path="JavaFxApplication.iws" />
@@ -61,60 +60,94 @@
     <favorites_list name="JavaFxApplication" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Avl.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/avlmodels/Avl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1206">
-              <caret line="86" column="5" selection-start-line="86" selection-start-column="5" selection-end-line="86" selection-end-column="5" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/avltreeui/Main.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="198">
-              <caret line="11" column="59" selection-start-line="11" selection-start-column="59" selection-end-line="11" selection-end-column="59" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Controller.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/avltreeui/Controller.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="444">
-              <caret line="116" column="42" selection-start-line="116" selection-start-column="42" selection-end-line="116" selection-end-column="42" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="method#onAddButtonClicked#0;class#Controller#0" />
-                <element signature="method#doesElementExist#0;class#Controller#0" />
-                <element signature="method#addElementToAvl#0;class#Controller#0" />
-                <element signature="method#createText#0;class#Controller#0" />
-                <element signature="method#createCircle#0;class#Controller#0" />
-                <element signature="method#cleanMainPane#0;class#Controller#0" />
-                <element signature="method#drawAvl#0;class#Controller#0" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Nodo.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/avlmodels/Nodo.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="216">
-              <caret line="14" selection-start-line="14" selection-end-line="14" />
-              <folding>
-                <element signature="e#304#305#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <splitter split-orientation="horizontal" split-proportion="0.543223">
+      <split-first>
+        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+          <file leaf-file-name="Avl.java" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/avlmodels/Avl.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="1206">
+                  <caret line="86" column="5" selection-start-line="86" selection-start-column="5" selection-end-line="86" selection-end-column="5" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/avltreeui/Main.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="198">
+                  <caret line="11" column="59" selection-start-line="11" selection-start-column="59" selection-end-line="11" selection-end-column="59" />
+                  <folding>
+                    <element signature="imports" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="Controller.java" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/src/avltreeui/Controller.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="310">
+                  <caret line="259" column="120" selection-start-line="259" selection-start-column="120" selection-end-line="259" selection-end-column="120" />
+                  <caret line="261" column="122" selection-start-line="261" selection-start-column="122" selection-end-line="261" selection-end-column="122" />
+                  <folding>
+                    <element signature="imports" expanded="true" />
+                    <element signature="method#doesElementExist#0;class#Controller#0" />
+                    <element signature="method#addElementToAvl#0;class#Controller#0" />
+                    <element signature="method#drawNodeCircle#0;class#Controller#0" />
+                    <element signature="method#deleteNodeFromAvl#0;class#Controller#0" />
+                    <element signature="method#createText#0;class#Controller#0" />
+                    <element signature="method#createCircle#0;class#Controller#0" />
+                    <element signature="method#cleanMainPane#0;class#Controller#0" />
+                    <element signature="method#drawLine#0;class#Controller#0" />
+                    <element signature="e#13041#13042#0" expanded="true" />
+                    <element signature="e#13101#13102#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="Nodo.java" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/avlmodels/Nodo.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="216">
+                  <caret line="14" selection-start-line="14" selection-end-line="14" />
+                  <folding>
+                    <element signature="e#304#305#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-first>
+      <split-second>
+        <leaf>
+          <file leaf-file-name="Controller.java" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/src/avltreeui/Controller.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="-4721">
+                  <caret line="52" lean-forward="true" selection-start-line="52" selection-end-line="52" />
+                  <folding>
+                    <element signature="imports" expanded="true" />
+                    <element signature="e#13041#13042#0" expanded="true" />
+                    <element signature="e#13101#13102#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-second>
+    </splitter>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>circleSize</find>
+    </findStrings>
+    <replaceStrings>
+      <replace>circleRadiusSize</replace>
+    </replaceStrings>
   </component>
   <component name="FindManager">
     <FindUsagesManager>
@@ -325,7 +358,7 @@
       <workItem from="1525324644279" duration="768000" />
       <workItem from="1525326241359" duration="49000" />
       <workItem from="1525366126212" duration="1510000" />
-      <workItem from="1525413358209" duration="2919000" />
+      <workItem from="1525413358209" duration="9723000" />
     </task>
     <task id="LOCAL-00001" summary="Finished Draw Avl function">
       <created>1525232160384</created>
@@ -362,15 +395,21 @@
       <option name="project" value="LOCAL" />
       <updated>1525415544694</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Set Click listener on the stack panes">
+      <created>1525416737323</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1525416737323</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="28431000" />
+    <option name="totallyTimeSpent" value="35235000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1920" y="27" width="1920" height="1053" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -382,11 +421,11 @@
       <window_info anchor="right" id="Maven Projects" order="3" />
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="7" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3286334" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.3286334" />
       <window_info anchor="bottom" id="Terminal" order="8" weight="0.35032538" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="2" />
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.6703755" visible="true" weight="0.19423692" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.6703755" visible="true" weight="0.19423692" />
       <window_info anchor="right" id="Database" order="3" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32982087" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -418,7 +457,8 @@
     <option name="INCLUDE_TEXT_INTO_SHELF" value="false" />
     <MESSAGE value="Finished Draw Avl function" />
     <MESSAGE value="Refactored Exist Element function" />
-    <option name="LAST_COMMIT_MESSAGE" value="Refactored Exist Element function" />
+    <MESSAGE value="Set Click listener on the stack panes" />
+    <option name="LAST_COMMIT_MESSAGE" value="Set Click listener on the stack panes" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -487,13 +527,16 @@
           <caret line="51" column="20" selection-start-line="51" selection-start-column="20" selection-end-line="51" selection-end-column="20" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#onAddButtonClicked#0;class#Controller#0" />
             <element signature="method#doesElementExist#0;class#Controller#0" />
             <element signature="method#addElementToAvl#0;class#Controller#0" />
+            <element signature="method#drawNodeCircle#0;class#Controller#0" />
+            <element signature="method#deleteNodeFromAvl#0;class#Controller#0" />
             <element signature="method#createText#0;class#Controller#0" />
             <element signature="method#createCircle#0;class#Controller#0" />
             <element signature="method#cleanMainPane#0;class#Controller#0" />
-            <element signature="method#drawAvl#0;class#Controller#0" />
+            <element signature="method#drawLine#0;class#Controller#0" />
+            <element signature="e#13041#13042#0" expanded="true" />
+            <element signature="e#13101#13102#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -511,13 +554,16 @@
           <caret line="19" selection-start-line="19" selection-end-line="19" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#onAddButtonClicked#0;class#Controller#0" />
             <element signature="method#doesElementExist#0;class#Controller#0" />
             <element signature="method#addElementToAvl#0;class#Controller#0" />
+            <element signature="method#drawNodeCircle#0;class#Controller#0" />
+            <element signature="method#deleteNodeFromAvl#0;class#Controller#0" />
             <element signature="method#createText#0;class#Controller#0" />
             <element signature="method#createCircle#0;class#Controller#0" />
             <element signature="method#cleanMainPane#0;class#Controller#0" />
-            <element signature="method#drawAvl#0;class#Controller#0" />
+            <element signature="method#drawLine#0;class#Controller#0" />
+            <element signature="e#13041#13042#0" expanded="true" />
+            <element signature="e#13101#13102#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -555,13 +601,16 @@
           <caret line="19" selection-start-line="19" selection-end-line="19" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#onAddButtonClicked#0;class#Controller#0" />
             <element signature="method#doesElementExist#0;class#Controller#0" />
             <element signature="method#addElementToAvl#0;class#Controller#0" />
+            <element signature="method#drawNodeCircle#0;class#Controller#0" />
+            <element signature="method#deleteNodeFromAvl#0;class#Controller#0" />
             <element signature="method#createText#0;class#Controller#0" />
             <element signature="method#createCircle#0;class#Controller#0" />
             <element signature="method#cleanMainPane#0;class#Controller#0" />
-            <element signature="method#drawAvl#0;class#Controller#0" />
+            <element signature="method#drawLine#0;class#Controller#0" />
+            <element signature="e#13041#13042#0" expanded="true" />
+            <element signature="e#13101#13102#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -609,13 +658,16 @@
           <caret line="19" selection-start-line="19" selection-end-line="19" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#onAddButtonClicked#0;class#Controller#0" />
             <element signature="method#doesElementExist#0;class#Controller#0" />
             <element signature="method#addElementToAvl#0;class#Controller#0" />
+            <element signature="method#drawNodeCircle#0;class#Controller#0" />
+            <element signature="method#deleteNodeFromAvl#0;class#Controller#0" />
             <element signature="method#createText#0;class#Controller#0" />
             <element signature="method#createCircle#0;class#Controller#0" />
             <element signature="method#cleanMainPane#0;class#Controller#0" />
-            <element signature="method#drawAvl#0;class#Controller#0" />
+            <element signature="method#drawLine#0;class#Controller#0" />
+            <element signature="e#13041#13042#0" expanded="true" />
+            <element signature="e#13101#13102#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -653,13 +705,16 @@
           <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#onAddButtonClicked#0;class#Controller#0" />
             <element signature="method#doesElementExist#0;class#Controller#0" />
             <element signature="method#addElementToAvl#0;class#Controller#0" />
+            <element signature="method#drawNodeCircle#0;class#Controller#0" />
+            <element signature="method#deleteNodeFromAvl#0;class#Controller#0" />
             <element signature="method#createText#0;class#Controller#0" />
             <element signature="method#createCircle#0;class#Controller#0" />
             <element signature="method#cleanMainPane#0;class#Controller#0" />
-            <element signature="method#drawAvl#0;class#Controller#0" />
+            <element signature="method#drawLine#0;class#Controller#0" />
+            <element signature="e#13041#13042#0" expanded="true" />
+            <element signature="e#13101#13102#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -690,13 +745,16 @@
           <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#onAddButtonClicked#0;class#Controller#0" />
             <element signature="method#doesElementExist#0;class#Controller#0" />
             <element signature="method#addElementToAvl#0;class#Controller#0" />
+            <element signature="method#drawNodeCircle#0;class#Controller#0" />
+            <element signature="method#deleteNodeFromAvl#0;class#Controller#0" />
             <element signature="method#createText#0;class#Controller#0" />
             <element signature="method#createCircle#0;class#Controller#0" />
             <element signature="method#cleanMainPane#0;class#Controller#0" />
-            <element signature="method#drawAvl#0;class#Controller#0" />
+            <element signature="method#drawLine#0;class#Controller#0" />
+            <element signature="e#13041#13042#0" expanded="true" />
+            <element signature="e#13101#13102#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -744,17 +802,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/avltreeui/Controller.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="444">
-          <caret line="116" column="42" selection-start-line="116" selection-start-column="42" selection-end-line="116" selection-end-column="42" />
+        <state relative-caret-position="310">
+          <caret line="259" column="120" selection-start-line="259" selection-start-column="120" selection-end-line="259" selection-end-column="120" />
+          <caret line="261" column="122" selection-start-line="261" selection-start-column="122" selection-end-line="261" selection-end-column="122" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#onAddButtonClicked#0;class#Controller#0" />
             <element signature="method#doesElementExist#0;class#Controller#0" />
             <element signature="method#addElementToAvl#0;class#Controller#0" />
+            <element signature="method#drawNodeCircle#0;class#Controller#0" />
+            <element signature="method#deleteNodeFromAvl#0;class#Controller#0" />
             <element signature="method#createText#0;class#Controller#0" />
             <element signature="method#createCircle#0;class#Controller#0" />
             <element signature="method#cleanMainPane#0;class#Controller#0" />
-            <element signature="method#drawAvl#0;class#Controller#0" />
+            <element signature="method#drawLine#0;class#Controller#0" />
+            <element signature="e#13041#13042#0" expanded="true" />
+            <element signature="e#13101#13102#0" expanded="true" />
           </folding>
         </state>
       </provider>

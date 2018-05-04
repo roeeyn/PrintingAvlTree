@@ -12,6 +12,7 @@ import javafx.scene.layout.Pane;
 import javafx.scene.layout.StackPane;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Circle;
+import javafx.scene.shape.Line;
 import javafx.scene.shape.StrokeType;
 import javafx.scene.text.Font;
 import javafx.scene.text.Text;
@@ -27,7 +28,7 @@ public class Controller {
     @FXML private TextField etNodeValue;
     @FXML private Pane mainPane;
 
-    private float circleSize = 25.0f;
+    private float circleRadiusSize = 25.0f;
 
     private ArrayList<Integer> elements = new ArrayList<>();
 
@@ -48,6 +49,7 @@ public class Controller {
                 elements.add(nodeValue);
                 addElementToAvl(nodeValue);
                 drawAvl();
+//                printHardcoded8Avl();
 
             } else showMessage("Ese elemento ya existe en el AVL");
 
@@ -80,6 +82,7 @@ public class Controller {
 
         // Este es el espacio extra que se va agregando cada que se agrega un nodo
         double extraWidth = 1.0f;
+        double extraHeight = 10.0f;
 
 
         Circle circle = createCircle();
@@ -108,6 +111,7 @@ public class Controller {
 
         mainPane.getChildren().add(stack);
         mainPane.setPrefWidth(mainPane.getPrefWidth()+ extraWidth);
+        mainPane.setPrefHeight(mainPane.getPrefHeight()+ extraHeight);
 
     }
 
@@ -132,7 +136,7 @@ public class Controller {
 
         Circle circle = new Circle();
 
-        circle.setRadius(circleSize);
+        circle.setRadius(circleRadiusSize);
         circle.setStroke(Color.DEEPSKYBLUE);
         circle.setStrokeWidth(2);
         circle.setStrokeType(StrokeType.INSIDE);
@@ -150,45 +154,14 @@ public class Controller {
 
     }
 
+    private void drawLine(double xPosition1, double yPosition1, double xPosition2, double yPosition2){
+
+        Line line = new Line(xPosition1, yPosition1, xPosition2, yPosition2);
+        mainPane.getChildren().add(line);
+
+    }
+
     private void drawAvl(){
-
-        // Bien 2
-//        drawNodeCircle("1", circleSize*1, 0.0f);
-//
-//        drawNodeCircle("1", 0.0f, circleSize*2);
-//        drawNodeCircle("2", circleSize*2, circleSize*2);
-
-
-        // Bien 4
-//        drawNodeCircle("1", circleSize*3, 0.0f);
-//
-//        drawNodeCircle("1", circleSize*1, circleSize*2);
-//        drawNodeCircle("2", circleSize*5, circleSize*2);
-//
-//        drawNodeCircle("1", 0.0f, circleSize*4);
-//        drawNodeCircle("2", circleSize*2, circleSize*4);
-//        drawNodeCircle("3", circleSize*4, circleSize*4);
-//        drawNodeCircle("4", circleSize*6, circleSize*4);
-
-        // Bien 8
-//        drawNodeCircle("1", circleSize*7, 0.0f);
-//
-//        drawNodeCircle("1", circleSize*3, circleSize*2);
-//        drawNodeCircle("2", circleSize*11, circleSize*2);
-//
-//        drawNodeCircle("1", circleSize*1, circleSize*4);
-//        drawNodeCircle("2", circleSize*5, circleSize*4);
-//        drawNodeCircle("3", circleSize*9, circleSize*4);
-//        drawNodeCircle("4", circleSize*13, circleSize*4);
-//
-//        drawNodeCircle("1", 0.0f, circleSize*6);
-//        drawNodeCircle("2", circleSize*2, circleSize*6);
-//        drawNodeCircle("3", circleSize*4, circleSize*6);
-//        drawNodeCircle("4", circleSize*6, circleSize*6);
-//        drawNodeCircle("1", circleSize*8, circleSize*6);
-//        drawNodeCircle("2", circleSize*10, circleSize*6);
-//        drawNodeCircle("3", circleSize*12, circleSize*6);
-//        drawNodeCircle("4", circleSize*14, circleSize*6);
 
         System.out.println();
         System.out.println();
@@ -216,6 +189,9 @@ public class Controller {
         List<Nodo> current = new ArrayList<>(1);
         List<Nodo> next = new ArrayList<>(2);
 
+        List<Float> previousXPositions = new ArrayList<>(1);
+        List<Float> actualXPositions = new ArrayList<>(2);
+
         current.add(root);
 
         // Cantidad de elements a usar en la siguiente iteración del ciclo
@@ -232,34 +208,44 @@ public class Controller {
         for(int i = 0; i < height; i++) {
 
             System.out.println("-----------Iteracion "+(i+1)+"------------------");
-            actualPositionX = ((int)Math.pow(2, height-1-i) - 1)*circleSize;
+            actualPositionX = ((int)Math.pow(2, height-1-i) - 1)*circleRadiusSize;
             System.out.println("Altura -> "+i);
             System.out.println("Ancho -> "+width);
             System.out.println("actualPositionX -> "+actualPositionX);
-            System.out.println("Multiplo de CircleSize -> "+actualPositionX/circleSize);
+            System.out.println("Multiplo de circleRadiusSize -> "+actualPositionX/circleRadiusSize);
+
+            int contadorParNodos = 0;
 
             // Print tree node elements
             for(Nodo n : current) {
 
                 System.out.println("************Iteracion Interna****************");
-                System.out.println("CircleSize -> "+(circleSize*Math.round(width / (acum + 1))));
-                System.out.println("Multiplo CircleSize -> "+(Math.round(width / (acum + 1))));
+                System.out.println("circleRadiusSize -> "+(circleRadiusSize*Math.round(width / (acum + 1))));
+                System.out.println("Multiplo circleRadiusSize -> "+(Math.round(width / (acum + 1))));
                 System.out.println("Valor de acum -> "+acum);
-                System.out.println("Valor multiplo de PositionX -> "+(actualPositionX/circleSize));
+                System.out.println("Valor multiplo de PositionX -> "+(actualPositionX/circleRadiusSize));
                 System.out.println("Valor actual de PositionX -> "+(actualPositionX));
 
                 if(n == null) {
+
                     next.add(null);
                     next.add(null);
 
                 } else {
-
                     drawNodeCircle(n.getElemento().toString(), actualPositionX, actualPositionY);
                     next.add(n.getIzquierdo());
                     next.add(n.getDerecho());
                 }
 
-                actualPositionX += circleSize*Math.round(width / (acum + 1));
+                if(contadorParNodos%2==0)
+                    previousXPositions.add(actualPositionX);
+
+
+
+                contadorParNodos++;
+
+                actualXPositions.add(actualPositionX);
+                actualPositionX += circleRadiusSize*Math.round(width / (acum + 1));
 
                 System.out.println("*********************************************");
 
@@ -267,17 +253,115 @@ public class Controller {
 
             if(i>0) acum++;
 
-            actualPositionY+=circleSize*2;
+            int indexPreviousX = 0;
+            for(int j=0;j<actualXPositions.size();j++){
+
+                if(j%2==0)
+                    drawLine(previousXPositions.get(indexPreviousX)+circleRadiusSize, actualPositionY-circleRadiusSize*2, actualXPositions.get(j)+circleRadiusSize, actualPositionY);
+                else
+                    drawLine(previousXPositions.get(indexPreviousX++)+circleRadiusSize, actualPositionY-circleRadiusSize*2, actualXPositions.get(j)+circleRadiusSize, actualPositionY);
+
+
+            }
+
+            actualPositionY+=circleRadiusSize*4;
+
+            previousXPositions = actualXPositions;
 
             elements *= 2;
             current = next;
             next = new ArrayList<>(elements);
+            actualXPositions = new ArrayList<>(elements);
 
             System.out.println("------------------------------------------------");
 
 
         }
 
+    }
+
+    private void printHardcoded2Avl(){
+
+        // Bien 2
+        drawNodeCircle("1", circleRadiusSize*1, 0.0f);
+
+        drawLine(circleRadiusSize*1+circleRadiusSize, circleRadiusSize*2, 0.0f+circleRadiusSize, circleRadiusSize*4);
+        drawLine(circleRadiusSize*1+circleRadiusSize, circleRadiusSize*2, circleRadiusSize*2+circleRadiusSize, circleRadiusSize*4);
+
+        drawNodeCircle("1", 0.0f, circleRadiusSize*4);
+        drawNodeCircle("2", circleRadiusSize*2, circleRadiusSize*4);
+
+    }
+
+    private void printHardcoded4Avl(){
+
+        // Bien 4
+        drawNodeCircle("1", circleRadiusSize*3, 0.0f);
+
+        drawLine(circleRadiusSize*3+circleRadiusSize, circleRadiusSize*2, circleRadiusSize*1+circleRadiusSize, circleRadiusSize*4);
+        drawLine(circleRadiusSize*3+circleRadiusSize, circleRadiusSize*2, circleRadiusSize*5+circleRadiusSize, circleRadiusSize*4);
+
+        drawNodeCircle("1", circleRadiusSize*1, circleRadiusSize*4);
+        drawNodeCircle("2", circleRadiusSize*5, circleRadiusSize*4);
+
+        drawLine(circleRadiusSize*1+circleRadiusSize, circleRadiusSize*4+circleRadiusSize*2, 0.0f+circleRadiusSize, circleRadiusSize*8);
+        drawLine(circleRadiusSize*1+circleRadiusSize, circleRadiusSize*4+circleRadiusSize*2, circleRadiusSize*2+circleRadiusSize, circleRadiusSize*8);
+
+        drawLine(circleRadiusSize*5+circleRadiusSize, circleRadiusSize*4+circleRadiusSize*2, circleRadiusSize*4+circleRadiusSize, circleRadiusSize*8);
+        drawLine(circleRadiusSize*5+circleRadiusSize, circleRadiusSize*4+circleRadiusSize*2, circleRadiusSize*6+circleRadiusSize, circleRadiusSize*8);
+
+
+        drawNodeCircle("1", 0.0f, circleRadiusSize*8);
+        drawNodeCircle("2", circleRadiusSize*2, circleRadiusSize*8);
+        drawNodeCircle("3", circleRadiusSize*4, circleRadiusSize*8);
+        drawNodeCircle("4", circleRadiusSize*6, circleRadiusSize*8);
+
+    }
+
+    private void printHardcoded8Avl(){
+
+        //         Bien 8
+        drawNodeCircle("1", circleRadiusSize*7, 0.0f);
+
+        drawLine(circleRadiusSize*7+circleRadiusSize, 0.0f+circleRadiusSize*2, circleRadiusSize*3+circleRadiusSize, 0.0f+circleRadiusSize*4);
+        drawLine(circleRadiusSize*7+circleRadiusSize, 0.0f+circleRadiusSize*2, circleRadiusSize*11+circleRadiusSize, 0.0f+circleRadiusSize*4);
+
+        drawNodeCircle("1", circleRadiusSize*3, circleRadiusSize*4);
+        drawNodeCircle("2", circleRadiusSize*11, circleRadiusSize*4);
+
+        drawLine(circleRadiusSize*3+circleRadiusSize, circleRadiusSize*4+circleRadiusSize*2, circleRadiusSize*1+circleRadiusSize, circleRadiusSize*8);
+        drawLine(circleRadiusSize*3+circleRadiusSize, circleRadiusSize*4+circleRadiusSize*2, circleRadiusSize*5+circleRadiusSize, circleRadiusSize*8);
+
+        drawLine(circleRadiusSize*11+circleRadiusSize, circleRadiusSize*4+circleRadiusSize*2, circleRadiusSize*9+circleRadiusSize, circleRadiusSize*8);
+        drawLine(circleRadiusSize*11+circleRadiusSize, circleRadiusSize*4+circleRadiusSize*2, circleRadiusSize*13+circleRadiusSize, circleRadiusSize*8);
+
+
+        drawNodeCircle("1", circleRadiusSize*1, circleRadiusSize*8);
+        drawNodeCircle("2", circleRadiusSize*5, circleRadiusSize*8);
+        drawNodeCircle("3", circleRadiusSize*9, circleRadiusSize*8);
+        drawNodeCircle("4", circleRadiusSize*13, circleRadiusSize*8);
+
+        drawLine(circleRadiusSize*1+circleRadiusSize, circleRadiusSize*8+circleRadiusSize*2, circleRadiusSize*0.0f+circleRadiusSize, circleRadiusSize*12);
+        drawLine(circleRadiusSize*1+circleRadiusSize, circleRadiusSize*8+circleRadiusSize*2, circleRadiusSize*2+circleRadiusSize, circleRadiusSize*12);
+
+        drawLine(circleRadiusSize*5+circleRadiusSize, circleRadiusSize*8+circleRadiusSize*2, circleRadiusSize*4+circleRadiusSize, circleRadiusSize*12);
+        drawLine(circleRadiusSize*5+circleRadiusSize, circleRadiusSize*8+circleRadiusSize*2, circleRadiusSize*6+circleRadiusSize, circleRadiusSize*12);
+
+        drawLine(circleRadiusSize*9+circleRadiusSize, circleRadiusSize*8+circleRadiusSize*2, circleRadiusSize*8+circleRadiusSize, circleRadiusSize*12);
+        drawLine(circleRadiusSize*9+circleRadiusSize, circleRadiusSize*8+circleRadiusSize*2, circleRadiusSize*10+circleRadiusSize, circleRadiusSize*12);
+
+        drawLine(circleRadiusSize*13+circleRadiusSize, circleRadiusSize*8+circleRadiusSize*2, circleRadiusSize*12+circleRadiusSize, circleRadiusSize*12);
+        drawLine(circleRadiusSize*13+circleRadiusSize, circleRadiusSize*8+circleRadiusSize*2, circleRadiusSize*14+circleRadiusSize, circleRadiusSize*12);
+
+
+        drawNodeCircle("1", 0.0f, circleRadiusSize*12);
+        drawNodeCircle("2", circleRadiusSize*2, circleRadiusSize*12);
+        drawNodeCircle("3", circleRadiusSize*4, circleRadiusSize*12);
+        drawNodeCircle("4", circleRadiusSize*6, circleRadiusSize*12);
+        drawNodeCircle("1", circleRadiusSize*8, circleRadiusSize*12);
+        drawNodeCircle("2", circleRadiusSize*10, circleRadiusSize*12);
+        drawNodeCircle("3", circleRadiusSize*12, circleRadiusSize*12);
+        drawNodeCircle("4", circleRadiusSize*14, circleRadiusSize*12);
 
     }
 
