@@ -256,10 +256,14 @@ public class Controller {
             int indexPreviousX = 0;
             for(int j=0;j<actualXPositions.size();j++){
 
-                if(j%2==0)
-                    drawLine(previousXPositions.get(indexPreviousX)+circleRadiusSize, actualPositionY-circleRadiusSize*2, actualXPositions.get(j)+circleRadiusSize, actualPositionY);
-                else
-                    drawLine(previousXPositions.get(indexPreviousX++)+circleRadiusSize, actualPositionY-circleRadiusSize*2, actualXPositions.get(j)+circleRadiusSize, actualPositionY);
+                if(j%2==0) {
+                    if (current.get(j) != null)
+                        drawLine(previousXPositions.get(indexPreviousX)+circleRadiusSize, actualPositionY-circleRadiusSize*2, actualXPositions.get(j)+circleRadiusSize, actualPositionY);
+                } else {
+                    if (current.get(j) != null)
+                        drawLine(previousXPositions.get(indexPreviousX)+circleRadiusSize, actualPositionY-circleRadiusSize*2, actualXPositions.get(j)+circleRadiusSize, actualPositionY);
+                    indexPreviousX++;
+                }
 
 
             }
