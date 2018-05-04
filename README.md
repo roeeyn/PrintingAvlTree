@@ -6,7 +6,7 @@ Avl printing using JavaFx
 
 You just can create and delete nodes :)
 
-![App Demo](https://drive.google.com/file/d/1-F5tOLTjpkv2Upf23UUBUVlTLwMHmzIU/view?usp=sharing)
+![App Demo](https://i.imgur.com/yer8gHj.png)
 
 ## Authors
 
