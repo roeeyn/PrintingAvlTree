@@ -232,15 +232,16 @@ public class Controller {
                     next.add(null);
 
                 } else {
+
                     drawNodeCircle(n.getElemento().toString(), actualPositionX, actualPositionY);
                     next.add(n.getIzquierdo());
                     next.add(n.getDerecho());
+
                 }
 
+                //Se agregan los puntos de X de los nodos de 'arriba' (padres)
                 if(contadorParNodos%2==0)
                     previousXPositions.add(actualPositionX);
-
-
 
                 contadorParNodos++;
 
@@ -253,20 +254,7 @@ public class Controller {
 
             if(i>0) acum++;
 
-            int indexPreviousX = 0;
-            for(int j=0;j<actualXPositions.size();j++){
-
-                if(j%2==0) {
-                    if (current.get(j) != null)
-                        drawLine(previousXPositions.get(indexPreviousX)+circleRadiusSize, actualPositionY-circleRadiusSize*2, actualXPositions.get(j)+circleRadiusSize, actualPositionY);
-                } else {
-                    if (current.get(j) != null)
-                        drawLine(previousXPositions.get(indexPreviousX)+circleRadiusSize, actualPositionY-circleRadiusSize*2, actualXPositions.get(j)+circleRadiusSize, actualPositionY);
-                    indexPreviousX++;
-                }
-
-
-            }
+            drawConnectingLines(actualXPositions, previousXPositions, current, actualPositionY);
 
             actualPositionY+=circleRadiusSize*4;
 
@@ -278,6 +266,25 @@ public class Controller {
             actualXPositions = new ArrayList<>(elements);
 
             System.out.println("------------------------------------------------");
+
+
+        }
+
+    }
+
+    private void drawConnectingLines(List<Float> actualXPositions, List<Float> previousXPositions, List<Nodo> current, float actualPositionY){
+
+        int indexPreviousX = 0;
+        for(int j=0;j<actualXPositions.size();j++){
+
+            if(j%2==0) {
+                if (current.get(j) != null)
+                    drawLine(previousXPositions.get(indexPreviousX)+circleRadiusSize, actualPositionY-circleRadiusSize*2, actualXPositions.get(j)+circleRadiusSize, actualPositionY);
+            } else {
+                if (current.get(j) != null)
+                    drawLine(previousXPositions.get(indexPreviousX)+circleRadiusSize, actualPositionY-circleRadiusSize*2, actualXPositions.get(j)+circleRadiusSize, actualPositionY);
+                indexPreviousX++;
+            }
 
 
         }
