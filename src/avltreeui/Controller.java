@@ -29,10 +29,6 @@ public class Controller {
 
     private Avl<Integer> avlTree = new Avl<>();
 
-    private void showMessage(String message){
-        JOptionPane.showMessageDialog(null, message);
-    }
-
     @FXML
     private void onAddButtonClicked(){
 
@@ -42,9 +38,7 @@ public class Controller {
 
             nodeValue = Integer.parseInt(etNodeValue.getText());
 
-            Long res = elements.stream().filter(n -> n == nodeValue).count();
-
-            if(res == 0){
+            if(!doesElementExist(nodeValue, elements)){
 
                 cleanMainPane();
                 elements.add(nodeValue);
@@ -59,6 +53,16 @@ public class Controller {
             showMessage("El valor debe de ser numérico");
 
         }
+
+    }
+
+    private boolean doesElementExist(int element, ArrayList<Integer> elements){
+
+        Long res = elements.stream().filter(n -> n == element).count();
+
+        System.out.println(res);
+
+        return res > 0;
 
     }
 
@@ -249,5 +253,10 @@ public class Controller {
 
 
     }
+
+    private void showMessage(String message){
+        JOptionPane.showMessageDialog(null, message);
+    }
+
 
 }
