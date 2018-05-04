@@ -19,7 +19,6 @@ import javafx.scene.text.Text;
 import javafx.scene.text.TextBoundsType;
 
 import javax.swing.*;
-import java.sql.SQLOutput;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -46,10 +45,12 @@ public class Controller {
             if(!doesElementExist(nodeValue, elements)){
 
                 cleanMainPane();
+                // Se añade a la lista de elementos para después ver que no haya repetidos
                 elements.add(nodeValue);
+                // Se añade el elemento al árbol
                 addElementToAvl(nodeValue);
+                // Se pinta el árbol
                 drawAvl();
-//                printHardcoded8Avl();
 
             } else showMessage("Ese elemento ya existe en el AVL");
 
@@ -77,9 +78,6 @@ public class Controller {
 
     private void drawNodeCircle(String element, double xPosition, double yPosition){
 
-        // Este es el índice en el que se encuentra el texto dentro del Group
-        int textIndex = 1;
-
         // Este es el espacio extra que se va agregando cada que se agrega un nodo
         double extraWidth = 1.0f;
         double extraHeight = 10.0f;
@@ -94,9 +92,23 @@ public class Controller {
         stack.setLayoutX(xPosition);
         stack.setLayoutY(yPosition);
         stack.getChildren().addAll(group, text);
-        stack.setOnMouseClicked(event -> {
 
-            String nodeValue = ((Text)stack.getChildren().get(textIndex)).getText();
+        setStackOnClickListener(stack);
+
+        mainPane.getChildren().add(stack);
+        mainPane.setPrefWidth(mainPane.getPrefWidth()+ extraWidth);
+        mainPane.setPrefHeight(mainPane.getPrefHeight()+ extraHeight);
+
+    }
+
+    private void setStackOnClickListener(StackPane stackPane){
+
+        // Este es el índice en el que se encuentra el texto dentro del Group
+        int textIndex = 1;
+
+        stackPane.setOnMouseClicked(event -> {
+
+            String nodeValue = ((Text)stackPane.getChildren().get(textIndex)).getText();
 
             int option = JOptionPane.showConfirmDialog(null, "Quieres eliminar el nodo "+nodeValue+"?", "Cuidado!", JOptionPane.YES_NO_OPTION);
 
@@ -108,10 +120,6 @@ public class Controller {
                 JOptionPane.showMessageDialog(null, "Abortado x2");
 
         });
-
-        mainPane.getChildren().add(stack);
-        mainPane.setPrefWidth(mainPane.getPrefWidth()+ extraWidth);
-        mainPane.setPrefHeight(mainPane.getPrefHeight()+ extraHeight);
 
     }
 
@@ -172,7 +180,7 @@ public class Controller {
 
         if(root == null) {
             // Como sólo agregas, nunca debería entrar acá
-            JOptionPane.showMessageDialog(null, "El Árbol está vacío");
+            showMessage("El árbol está vacío");
             return;
         }
 
@@ -198,7 +206,7 @@ public class Controller {
         // Cada iteración será el doble de elements
         int elements = 1;
 
-        // Un acumulador que cuenta cada que recorres un nivel del arbol
+        // Un acumulador que cuenta cada que recorres un nivel del árbol
         int acum = 0;
 
         // Posiciones en pixeles de los Circulos
@@ -240,8 +248,7 @@ public class Controller {
                 }
 
                 //Se agregan los puntos de X de los nodos de 'arriba' (padres)
-                if(contadorParNodos%2==0)
-                    previousXPositions.add(actualPositionX);
+                if(contadorParNodos%2==0) previousXPositions.add(actualPositionX);
 
                 contadorParNodos++;
 
@@ -254,8 +261,10 @@ public class Controller {
 
             if(i>0) acum++;
 
+            // Se dibujan las líneas que unen los nodos
             drawConnectingLines(actualXPositions, previousXPositions, current, actualPositionY);
 
+            // Se pasa al nivel de abajo
             actualPositionY+=circleRadiusSize*4;
 
             previousXPositions = actualXPositions;

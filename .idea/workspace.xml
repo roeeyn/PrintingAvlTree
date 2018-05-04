@@ -61,77 +61,59 @@
     <favorites_list name="JavaFxApplication" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.543223">
-      <split-first>
-        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file leaf-file-name="Avl.java" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/avlmodels/Avl.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="1206">
-                  <caret line="86" column="5" selection-start-line="86" selection-start-column="5" selection-end-line="86" selection-end-column="5" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/avltreeui/Main.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="198">
-                  <caret line="11" column="59" selection-start-line="11" selection-start-column="59" selection-end-line="11" selection-end-column="59" />
-                  <folding>
-                    <element signature="imports" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="Controller.java" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/src/avltreeui/Controller.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="350">
-                  <caret line="262" column="37" selection-start-line="262" selection-start-column="37" selection-end-line="262" selection-end-column="37" />
-                  <folding>
-                    <element signature="imports" expanded="true" />
-                    <element signature="e#13725#13726#0" expanded="true" />
-                    <element signature="e#13785#13786#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="Nodo.java" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/avlmodels/Nodo.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="216">
-                  <caret line="14" selection-start-line="14" selection-end-line="14" />
-                  <folding>
-                    <element signature="e#304#305#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-first>
-      <split-second>
-        <leaf>
-          <file leaf-file-name="Controller.java" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/src/avltreeui/Controller.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="-4109">
-                  <caret line="52" lean-forward="true" selection-start-line="52" selection-end-line="52" />
-                  <folding>
-                    <element signature="imports" expanded="true" />
-                    <element signature="e#14122#14123#0" expanded="true" />
-                    <element signature="e#14182#14183#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-second>
-    </splitter>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="Avl.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/avlmodels/Avl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1206">
+              <caret line="86" column="5" selection-start-line="86" selection-start-column="5" selection-end-line="86" selection-end-column="5" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/avltreeui/Main.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="198">
+              <caret line="11" column="59" selection-start-line="11" selection-start-column="59" selection-end-line="11" selection-end-column="59" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Controller.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/avltreeui/Controller.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="2983">
+              <caret line="250" column="82" lean-forward="true" selection-start-line="250" selection-start-column="82" selection-end-line="250" selection-end-column="82" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="method#drawConnectingLines#0;class#Controller#0" />
+                <element signature="method#printHardcoded2Avl#0;class#Controller#0" />
+                <element signature="method#printHardcoded4Avl#0;class#Controller#0" />
+                <element signature="method#printHardcoded8Avl#0;class#Controller#0" />
+                <element signature="e#13725#13726#0" expanded="true" />
+                <element signature="e#13785#13786#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Nodo.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/avlmodels/Nodo.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="216">
+              <caret line="14" selection-start-line="14" selection-end-line="14" />
+              <folding>
+                <element signature="e#304#305#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
@@ -394,11 +376,18 @@
       <option name="project" value="LOCAL" />
       <updated>1525416737323</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Factorized Draw Connecting Lines">
+      <created>1525429834249</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1525429834249</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="35841000" />
+    <option name="totallyTimeSpent" value="37459000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1920" y="27" width="1920" height="1053" extended-state="6" />
@@ -474,7 +463,8 @@
     <MESSAGE value="Finished Draw Avl function" />
     <MESSAGE value="Refactored Exist Element function" />
     <MESSAGE value="Set Click listener on the stack panes" />
-    <option name="LAST_COMMIT_MESSAGE" value="Set Click listener on the stack panes" />
+    <MESSAGE value="Factorized Draw Connecting Lines" />
+    <option name="LAST_COMMIT_MESSAGE" value="Factorized Draw Connecting Lines" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -543,6 +533,10 @@
           <caret line="19" selection-start-line="19" selection-end-line="19" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="method#drawConnectingLines#0;class#Controller#0" />
+            <element signature="method#printHardcoded2Avl#0;class#Controller#0" />
+            <element signature="method#printHardcoded4Avl#0;class#Controller#0" />
+            <element signature="method#printHardcoded8Avl#0;class#Controller#0" />
             <element signature="e#13725#13726#0" expanded="true" />
             <element signature="e#13785#13786#0" expanded="true" />
           </folding>
@@ -592,6 +586,10 @@
           <caret line="19" selection-start-line="19" selection-end-line="19" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="method#drawConnectingLines#0;class#Controller#0" />
+            <element signature="method#printHardcoded2Avl#0;class#Controller#0" />
+            <element signature="method#printHardcoded4Avl#0;class#Controller#0" />
+            <element signature="method#printHardcoded8Avl#0;class#Controller#0" />
             <element signature="e#13725#13726#0" expanded="true" />
             <element signature="e#13785#13786#0" expanded="true" />
           </folding>
@@ -631,6 +629,10 @@
           <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="method#drawConnectingLines#0;class#Controller#0" />
+            <element signature="method#printHardcoded2Avl#0;class#Controller#0" />
+            <element signature="method#printHardcoded4Avl#0;class#Controller#0" />
+            <element signature="method#printHardcoded8Avl#0;class#Controller#0" />
             <element signature="e#13725#13726#0" expanded="true" />
             <element signature="e#13785#13786#0" expanded="true" />
           </folding>
@@ -663,6 +665,10 @@
           <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="method#drawConnectingLines#0;class#Controller#0" />
+            <element signature="method#printHardcoded2Avl#0;class#Controller#0" />
+            <element signature="method#printHardcoded4Avl#0;class#Controller#0" />
+            <element signature="method#printHardcoded8Avl#0;class#Controller#0" />
             <element signature="e#13725#13726#0" expanded="true" />
             <element signature="e#13785#13786#0" expanded="true" />
           </folding>
@@ -732,6 +738,10 @@
           <caret line="315" column="30" selection-start-line="315" selection-start-column="30" selection-end-line="315" selection-end-column="30" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="method#drawConnectingLines#0;class#Controller#0" />
+            <element signature="method#printHardcoded2Avl#0;class#Controller#0" />
+            <element signature="method#printHardcoded4Avl#0;class#Controller#0" />
+            <element signature="method#printHardcoded8Avl#0;class#Controller#0" />
             <element signature="e#13725#13726#0" expanded="true" />
             <element signature="e#13785#13786#0" expanded="true" />
           </folding>
@@ -771,6 +781,10 @@
           <caret line="51" column="20" selection-start-line="51" selection-start-column="20" selection-end-line="51" selection-end-column="20" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="method#drawConnectingLines#0;class#Controller#0" />
+            <element signature="method#printHardcoded2Avl#0;class#Controller#0" />
+            <element signature="method#printHardcoded4Avl#0;class#Controller#0" />
+            <element signature="method#printHardcoded8Avl#0;class#Controller#0" />
             <element signature="e#13725#13726#0" expanded="true" />
             <element signature="e#13785#13786#0" expanded="true" />
           </folding>
@@ -790,6 +804,10 @@
           <caret line="19" selection-start-line="19" selection-end-line="19" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="method#drawConnectingLines#0;class#Controller#0" />
+            <element signature="method#printHardcoded2Avl#0;class#Controller#0" />
+            <element signature="method#printHardcoded4Avl#0;class#Controller#0" />
+            <element signature="method#printHardcoded8Avl#0;class#Controller#0" />
             <element signature="e#13725#13726#0" expanded="true" />
             <element signature="e#13785#13786#0" expanded="true" />
           </folding>
@@ -829,6 +847,10 @@
           <caret line="19" selection-start-line="19" selection-end-line="19" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="method#drawConnectingLines#0;class#Controller#0" />
+            <element signature="method#printHardcoded2Avl#0;class#Controller#0" />
+            <element signature="method#printHardcoded4Avl#0;class#Controller#0" />
+            <element signature="method#printHardcoded8Avl#0;class#Controller#0" />
             <element signature="e#13725#13726#0" expanded="true" />
             <element signature="e#13785#13786#0" expanded="true" />
           </folding>
@@ -878,6 +900,10 @@
           <caret line="19" selection-start-line="19" selection-end-line="19" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="method#drawConnectingLines#0;class#Controller#0" />
+            <element signature="method#printHardcoded2Avl#0;class#Controller#0" />
+            <element signature="method#printHardcoded4Avl#0;class#Controller#0" />
+            <element signature="method#printHardcoded8Avl#0;class#Controller#0" />
             <element signature="e#13725#13726#0" expanded="true" />
             <element signature="e#13785#13786#0" expanded="true" />
           </folding>
@@ -917,6 +943,10 @@
           <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="method#drawConnectingLines#0;class#Controller#0" />
+            <element signature="method#printHardcoded2Avl#0;class#Controller#0" />
+            <element signature="method#printHardcoded4Avl#0;class#Controller#0" />
+            <element signature="method#printHardcoded8Avl#0;class#Controller#0" />
             <element signature="e#13725#13726#0" expanded="true" />
             <element signature="e#13785#13786#0" expanded="true" />
           </folding>
@@ -949,6 +979,10 @@
           <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="method#drawConnectingLines#0;class#Controller#0" />
+            <element signature="method#printHardcoded2Avl#0;class#Controller#0" />
+            <element signature="method#printHardcoded4Avl#0;class#Controller#0" />
+            <element signature="method#printHardcoded8Avl#0;class#Controller#0" />
             <element signature="e#13725#13726#0" expanded="true" />
             <element signature="e#13785#13786#0" expanded="true" />
           </folding>
@@ -998,10 +1032,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/avltreeui/Controller.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="350">
-          <caret line="262" column="37" selection-start-line="262" selection-start-column="37" selection-end-line="262" selection-end-column="37" />
+        <state relative-caret-position="2983">
+          <caret line="250" column="82" lean-forward="true" selection-start-line="250" selection-start-column="82" selection-end-line="250" selection-end-column="82" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="method#drawConnectingLines#0;class#Controller#0" />
+            <element signature="method#printHardcoded2Avl#0;class#Controller#0" />
+            <element signature="method#printHardcoded4Avl#0;class#Controller#0" />
+            <element signature="method#printHardcoded8Avl#0;class#Controller#0" />
             <element signature="e#13725#13726#0" expanded="true" />
             <element signature="e#13785#13786#0" expanded="true" />
           </folding>
