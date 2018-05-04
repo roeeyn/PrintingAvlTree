@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="" />
+    <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JavaFxApplication/avltreeui/Controller.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JavaFxApplication/avltreeui/Controller.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/avltreeui/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/avltreeui/Controller.java" afterDir="false" />
+    </list>
     <ignored path="JavaFxApplication.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path="$PROJECT_DIR$/out/" />
@@ -61,7 +65,7 @@
       <file leaf-file-name="Avl.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/avlmodels/Avl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1422">
+            <state relative-caret-position="1206">
               <caret line="86" column="5" selection-start-line="86" selection-start-column="5" selection-end-line="86" selection-end-column="5" />
             </state>
           </provider>
@@ -70,7 +74,7 @@
       <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/avltreeui/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="126">
+            <state relative-caret-position="198">
               <caret line="11" column="59" selection-start-line="11" selection-start-column="59" selection-end-line="11" selection-end-column="59" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -82,10 +86,13 @@
       <file leaf-file-name="Controller.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/avltreeui/Controller.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="87">
-              <caret line="27" column="39" selection-start-line="27" selection-start-column="39" selection-end-line="27" selection-end-column="39" />
+            <state relative-caret-position="444">
+              <caret line="116" column="42" selection-start-line="116" selection-start-column="42" selection-end-line="116" selection-end-column="42" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="method#onAddButtonClicked#0;class#Controller#0" />
+                <element signature="method#doesElementExist#0;class#Controller#0" />
+                <element signature="method#addElementToAvl#0;class#Controller#0" />
                 <element signature="method#createText#0;class#Controller#0" />
                 <element signature="method#createCircle#0;class#Controller#0" />
                 <element signature="method#cleanMainPane#0;class#Controller#0" />
@@ -141,9 +148,9 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="y" value="27" />
-    <option name="width" value="1920" />
-    <option name="height" value="1053" />
+    <option name="x" value="1637" />
+    <option name="width" value="1717" />
+    <option name="height" value="944" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectReloadState">
@@ -318,7 +325,7 @@
       <workItem from="1525324644279" duration="768000" />
       <workItem from="1525326241359" duration="49000" />
       <workItem from="1525366126212" duration="1510000" />
-      <workItem from="1525413358209" duration="790000" />
+      <workItem from="1525413358209" duration="2919000" />
     </task>
     <task id="LOCAL-00001" summary="Finished Draw Avl function">
       <created>1525232160384</created>
@@ -348,18 +355,26 @@
       <option name="project" value="LOCAL" />
       <updated>1525414421904</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Refactored Exist Element function">
+      <created>1525415544694</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1525415544694</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="26302000" />
+    <option name="totallyTimeSpent" value="28431000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1920" height="1080" extended-state="6" />
+    <frame x="1920" y="27" width="1920" height="1053" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Messages" order="7" weight="0.329718" />
       <window_info anchor="right" id="Palette&#9;" order="4" />
       <window_info id="Image Layers" order="2" />
       <window_info anchor="right" id="Capture Analysis" order="4" />
@@ -367,8 +382,8 @@
       <window_info anchor="right" id="Maven Projects" order="3" />
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="7" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.3286334" />
-      <window_info anchor="bottom" id="Terminal" order="8" weight="0.3409091" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3286334" />
+      <window_info anchor="bottom" id="Terminal" order="8" weight="0.35032538" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="2" />
       <window_info content_ui="combo" id="Project" order="0" sideWeight="0.6703755" visible="true" weight="0.19423692" />
@@ -381,7 +396,6 @@
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3991323" />
       <window_info anchor="right" id="JetGradle" order="3" />
-      <window_info anchor="bottom" id="Messages" order="7" weight="0.329718" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="bottom" id="Changes" order="7" />
@@ -403,7 +417,8 @@
     <option name="OFFER_MOVE_TO_ANOTHER_CHANGELIST_ON_PARTIAL_COMMIT" value="true" />
     <option name="INCLUDE_TEXT_INTO_SHELF" value="false" />
     <MESSAGE value="Finished Draw Avl function" />
-    <option name="LAST_COMMIT_MESSAGE" value="Finished Draw Avl function" />
+    <MESSAGE value="Refactored Exist Element function" />
+    <option name="LAST_COMMIT_MESSAGE" value="Refactored Exist Element function" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -472,6 +487,9 @@
           <caret line="51" column="20" selection-start-line="51" selection-start-column="20" selection-end-line="51" selection-end-column="20" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="method#onAddButtonClicked#0;class#Controller#0" />
+            <element signature="method#doesElementExist#0;class#Controller#0" />
+            <element signature="method#addElementToAvl#0;class#Controller#0" />
             <element signature="method#createText#0;class#Controller#0" />
             <element signature="method#createCircle#0;class#Controller#0" />
             <element signature="method#cleanMainPane#0;class#Controller#0" />
@@ -493,6 +511,9 @@
           <caret line="19" selection-start-line="19" selection-end-line="19" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="method#onAddButtonClicked#0;class#Controller#0" />
+            <element signature="method#doesElementExist#0;class#Controller#0" />
+            <element signature="method#addElementToAvl#0;class#Controller#0" />
             <element signature="method#createText#0;class#Controller#0" />
             <element signature="method#createCircle#0;class#Controller#0" />
             <element signature="method#cleanMainPane#0;class#Controller#0" />
@@ -534,6 +555,9 @@
           <caret line="19" selection-start-line="19" selection-end-line="19" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="method#onAddButtonClicked#0;class#Controller#0" />
+            <element signature="method#doesElementExist#0;class#Controller#0" />
+            <element signature="method#addElementToAvl#0;class#Controller#0" />
             <element signature="method#createText#0;class#Controller#0" />
             <element signature="method#createCircle#0;class#Controller#0" />
             <element signature="method#cleanMainPane#0;class#Controller#0" />
@@ -585,6 +609,9 @@
           <caret line="19" selection-start-line="19" selection-end-line="19" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="method#onAddButtonClicked#0;class#Controller#0" />
+            <element signature="method#doesElementExist#0;class#Controller#0" />
+            <element signature="method#addElementToAvl#0;class#Controller#0" />
             <element signature="method#createText#0;class#Controller#0" />
             <element signature="method#createCircle#0;class#Controller#0" />
             <element signature="method#cleanMainPane#0;class#Controller#0" />
@@ -626,6 +653,9 @@
           <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="method#onAddButtonClicked#0;class#Controller#0" />
+            <element signature="method#doesElementExist#0;class#Controller#0" />
+            <element signature="method#addElementToAvl#0;class#Controller#0" />
             <element signature="method#createText#0;class#Controller#0" />
             <element signature="method#createCircle#0;class#Controller#0" />
             <element signature="method#cleanMainPane#0;class#Controller#0" />
@@ -660,6 +690,9 @@
           <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="method#onAddButtonClicked#0;class#Controller#0" />
+            <element signature="method#doesElementExist#0;class#Controller#0" />
+            <element signature="method#addElementToAvl#0;class#Controller#0" />
             <element signature="method#createText#0;class#Controller#0" />
             <element signature="method#createCircle#0;class#Controller#0" />
             <element signature="method#cleanMainPane#0;class#Controller#0" />
@@ -692,9 +725,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/avlmodels/Avl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1206">
+          <caret line="86" column="5" selection-start-line="86" selection-start-column="5" selection-end-line="86" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/avltreeui/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
+        <state relative-caret-position="198">
           <caret line="11" column="59" selection-start-line="11" selection-start-column="59" selection-end-line="11" selection-end-column="59" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -702,19 +742,15 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/avlmodels/Avl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1422">
-          <caret line="86" column="5" selection-start-line="86" selection-start-column="5" selection-end-line="86" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/avltreeui/Controller.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="87">
-          <caret line="27" column="39" selection-start-line="27" selection-start-column="39" selection-end-line="27" selection-end-column="39" />
+        <state relative-caret-position="444">
+          <caret line="116" column="42" selection-start-line="116" selection-start-column="42" selection-end-line="116" selection-end-column="42" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="method#onAddButtonClicked#0;class#Controller#0" />
+            <element signature="method#doesElementExist#0;class#Controller#0" />
+            <element signature="method#addElementToAvl#0;class#Controller#0" />
             <element signature="method#createText#0;class#Controller#0" />
             <element signature="method#createCircle#0;class#Controller#0" />
             <element signature="method#cleanMainPane#0;class#Controller#0" />

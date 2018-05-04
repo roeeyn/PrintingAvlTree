@@ -2,9 +2,12 @@ package avltreeui;
 
 import avlmodels.Avl;
 import avlmodels.Nodo;
+import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.scene.Group;
+import javafx.scene.Node;
 import javafx.scene.control.TextField;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.Pane;
 import javafx.scene.layout.StackPane;
 import javafx.scene.paint.Color;
@@ -15,6 +18,7 @@ import javafx.scene.text.Text;
 import javafx.scene.text.TextBoundsType;
 
 import javax.swing.*;
+import java.sql.SQLOutput;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -59,9 +63,6 @@ public class Controller {
     private boolean doesElementExist(int element, ArrayList<Integer> elements){
 
         Long res = elements.stream().filter(n -> n == element).count();
-
-        System.out.println(res);
-
         return res > 0;
 
     }
@@ -74,6 +75,13 @@ public class Controller {
 
     private void drawNodeCircle(String element, double xPosition, double yPosition){
 
+        // Este es el índice en el que se encuentra el texto dentro del Group
+        int textIndex = 1;
+
+        // Este es el espacio extra que se va agregando cada que se agrega un nodo
+        double extraWidth = 1.0f;
+
+
         Circle circle = createCircle();
         Text text = createText(element);
 
@@ -83,11 +91,30 @@ public class Controller {
         stack.setLayoutX(xPosition);
         stack.setLayoutY(yPosition);
         stack.getChildren().addAll(group, text);
+        stack.setOnMouseClicked(event -> {
+
+            String nodeValue = ((Text)stack.getChildren().get(textIndex)).getText();
+
+            int option = JOptionPane.showConfirmDialog(null, "Quieres eliminar el nodo "+nodeValue+"?", "Cuidado!", JOptionPane.YES_NO_OPTION);
+
+            if(option == JOptionPane.YES_OPTION)
+                deleteNodeFromAvl(nodeValue);
+            else if(option == JOptionPane.NO_OPTION)
+                JOptionPane.showMessageDialog(null, "Abortado :)");
+            else
+                JOptionPane.showMessageDialog(null, "Abortado x2");
+
+        });
 
         mainPane.getChildren().add(stack);
-
-        double extraWidth = 10.0f;
         mainPane.setPrefWidth(mainPane.getPrefWidth()+ extraWidth);
+
+    }
+
+    private void deleteNodeFromAvl(String element){
+
+       //TODO Implementar el eliminar nodo
+        JOptionPane.showMessageDialog(null, element+"Deberá ser borrado...");
 
     }
 
