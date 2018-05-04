@@ -20,6 +20,12 @@ public class Avl<T extends Comparable<T>> {
         raiz= insertaRecursiva(elemento,raiz);
     }
 
+    public void eliminarElemento(T elemento){
+
+        //TODO
+
+    }
+
     private Nodo<T> insertaRecursiva(T elemento, Nodo<T> raiz){
         if(raiz==null) {
             raiz= new Nodo<T>(elemento);
@@ -49,8 +55,7 @@ public class Avl<T extends Comparable<T>> {
         return raiz;
     }
 
-    private Nodo<T> rotarALaIzquierdaSimple(Nodo<T> raiz)
-    {
+    private Nodo<T> rotarALaIzquierdaSimple(Nodo<T> raiz) {
         System.out.println("Roto simple a la izquierda");
         Nodo<T>  temp = raiz.getDerecho();
         raiz.setDerecho( temp.getIzquierdo());
@@ -60,8 +65,7 @@ public class Avl<T extends Comparable<T>> {
         return temp;
     }
 
-    private Nodo<T> rotarALaDerechaSimple(Nodo<T> raiz)
-    {
+    private Nodo<T> rotarALaDerechaSimple(Nodo<T> raiz) {
         System.out.println("Roto simple a la derecha");
 
         Nodo<T> temp = raiz.getIzquierdo();
@@ -71,21 +75,20 @@ public class Avl<T extends Comparable<T>> {
         temp.setAltura(max( altura( temp.getIzquierdo() ), raiz.getAltura() ) + 1);
         return temp;
     }
-    private Nodo<T> rotacionDobleALaDerecha(Nodo<T> raiz)
-    {
+
+    private Nodo<T> rotacionDobleALaDerecha(Nodo<T> raiz) {
         System.out.println("Roto doble a la derecha");
 
         raiz.setIzquierdo(rotarALaIzquierdaSimple( raiz.getIzquierdo() ));
         return rotarALaDerechaSimple( raiz );
     }
-    private Nodo<T> rotacionDobleALaIzquierda(Nodo<T> raiz)
-    {
+
+    private Nodo<T> rotacionDobleALaIzquierda(Nodo<T> raiz) {
         System.out.println("Roto doble a la izquierda");
 
         raiz.setDerecho(rotarALaDerechaSimple( raiz.getDerecho() ));
         return rotarALaIzquierdaSimple( raiz );
     }
-
 
     private int max(int a,int b) {
         if(a>b) {
@@ -94,6 +97,7 @@ public class Avl<T extends Comparable<T>> {
             return b;
         }
     }
+
     private int altura(Nodo<T> nodo) {
         if(nodo==null) {
             return -1;
