@@ -125,8 +125,14 @@ public class Controller {
 
     private void deleteNodeFromAvl(String element){
 
-       //TODO Implementar el eliminar nodo
-        JOptionPane.showMessageDialog(null, element+"Deberá ser borrado...");
+        cleanMainPane();
+        avlTree.eliminarElemento(Integer.parseInt(element));
+        elements.remove((Integer)Integer.parseInt(element));
+
+        //Se pintará el árbol si hay elementos en la lista
+        if(elements.size() > 0)
+            drawAvl();
+
 
     }
 

@@ -21,9 +21,40 @@ public class Avl<T extends Comparable<T>> {
     }
 
     public void eliminarElemento(T elemento){
+        raiz= eliminarElementoRec(elemento,raiz);
+    }
 
-        //TODO
+    private Nodo<T> eliminarElementoRec(T elemento, Nodo<T> raiz){
 
+        // TODO Optimizar el método :)
+
+        if(raiz==null) {
+            return null;
+        }if(elemento.compareTo(raiz.getElemento())<0) {
+            raiz.setIzquierdo(eliminarElementoRec( elemento, raiz.getIzquierdo()));
+        }else if (elemento.compareTo(raiz.getElemento())>0) {
+            raiz.setDerecho(eliminarElementoRec( elemento, raiz.getDerecho()));
+        }else {
+            if(raiz.getIzquierdo()==null) {
+                return raiz.getDerecho();
+            }else if (raiz.getDerecho()==null) {
+                return raiz.getIzquierdo();
+            }
+            raiz.setElemento(valMin(raiz.getDerecho()));
+            raiz.setDerecho(eliminarElementoRec(raiz.getElemento(), raiz.getDerecho()));
+        }
+
+        return raiz;
+
+    }
+
+    public T valMin(Nodo<T> root) {
+        T min = root.getElemento();
+        while(root.getIzquierdo()!=null) {
+            root=root.getIzquierdo();
+            min=root.getElemento();
+        }
+        return min;
     }
 
     private Nodo<T> insertaRecursiva(T elemento, Nodo<T> raiz){
